@@ -1,0 +1,213 @@
+[gd_scene load_steps=17 format=3 uid="uid://cbg1cpivg32vr"]
+
+[ext_resource type="Texture2D" uid="uid://bsr5o735q1qpc" path="res://Assets/MVP ASSETS/level_REFERENCE.png" id="1_s0vy4"]
+[ext_resource type="PackedScene" uid="uid://c50u1goalrfh" path="res://Scenes/player.tscn" id="2_rjlkf"]
+[ext_resource type="Script" uid="uid://do6ac2ea42dtf" path="res://Scripts/start_sequence.gd" id="3_idn0c"]
+[ext_resource type="Texture2D" uid="uid://b7ngda4t5ouhl" path="res://Assets/MVP ASSETS/levelstart1.png" id="3_lv6kt"]
+[ext_resource type="Texture2D" uid="uid://cvnh6lbipem4a" path="res://Assets/MVP ASSETS/levelstart2.png" id="4_wequu"]
+[ext_resource type="Texture2D" uid="uid://bu1wbugt81yik" path="res://Assets/MVP ASSETS/levelstart3.png" id="5_j3xmp"]
+
+[sub_resource type="Animation" id="Animation_jhu26"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Levelstart1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Levelstart2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Levelstart3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_idn0c"]
+resource_name = "start1_FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Levelstart1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w04je"]
+resource_name = "start1_FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Levelstart1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7jdm3"]
+resource_name = "start2_FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Levelstart2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pc6fx"]
+resource_name = "start2_FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Levelstart2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gw0am"]
+resource_name = "start3_FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Levelstart3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4eyhr"]
+resource_name = "start3_FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Levelstart3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w04je"]
+_data = {
+&"RESET": SubResource("Animation_jhu26"),
+&"start1_FadeIn": SubResource("Animation_idn0c"),
+&"start1_FadeOut": SubResource("Animation_w04je"),
+&"start2_FadeIn": SubResource("Animation_7jdm3"),
+&"start2_FadeOut": SubResource("Animation_pc6fx"),
+&"start3_FadeIn": SubResource("Animation_gw0am"),
+&"start3_FadeOut": SubResource("Animation_4eyhr")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idn0c"]
+size = Vector2(66.08869, 105.73886)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhu26"]
+size = Vector2(131.50153, 71.38626)
+
+[node name="Level 1" type="Node2D"]
+
+[node name="LevelUI" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("1_s0vy4")
+
+[node name="Player" parent="." instance=ExtResource("2_rjlkf")]
+position = Vector2(588, 529)
+speed = 250
+startingPos = Vector2(588, 529)
+
+[node name="StartSequence" type="Node2D" parent="."]
+script = ExtResource("3_idn0c")
+
+[node name="Levelstart1" type="Sprite2D" parent="StartSequence"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(577, 323)
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("3_lv6kt")
+
+[node name="Levelstart2" type="Sprite2D" parent="StartSequence"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(575, 326)
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("4_wequu")
+
+[node name="Levelstart3" type="Sprite2D" parent="StartSequence"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(577, 326)
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("5_j3xmp")
+
+[node name="start_anim" type="AnimationPlayer" parent="StartSequence"]
+libraries = {
+&"": SubResource("AnimationLibrary_w04je")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(589.52, 505.64066)
+rotation = -0.8452524
+shape = SubResource("RectangleShape2D_idn0c")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(537.75476, 543.9802)
+rotation = 0.5371869
+shape = SubResource("RectangleShape2D_jhu26")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(621.00006, 543.00006)
+rotation = -0.53699577
+shape = SubResource("RectangleShape2D_jhu26")
+
+[connection signal="animation_finished" from="StartSequence/start_anim" to="StartSequence" method="_on_start_anim_animation_finished"]
+[connection signal="input_event" from="Area2D" to="Player" method="_on_area_2d_input_event"]

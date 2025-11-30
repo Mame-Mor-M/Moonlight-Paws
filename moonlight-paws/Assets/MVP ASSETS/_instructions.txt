@@ -1,0 +1,31 @@
+intro scenes:
+- when game starts, intro1 and intro2 fade in first
+- end of intro 2 fade to black, cut into main menu, like pick your poison (i think)
+- for ALL scenes, will have skip button avail (hold to skip tho, so holding will skip everything, not a per scene skip)
+
+main menu/settings:
+- pretty straightforward, MVP doesn't have any on hover, but final will
+
+level selection: 
+- MVP won't need it yet, but cat will have a "super mario"-esque pipe animation (glowing light from underneath and cat goess under/pops up from the light when ever yyou go to a different level)
+- when you click, cat travels to that place and then you confirm by clicking "SELECT" or clicking the level again
+
+level intro:
+- once level is clicked, levelstart1/2/3 go in the same style as intro1/2, and fades to black/cut into the actual level
+
+level:
+- press button in certain order?
+- each button has diff design
+
+- first button at bottom, once pressed, phrase from Nyx comes out as hint for which button to press next
+- after buttons are pressed a line of where the stars outline is slides in (like drawing the line out, is this hard to code)
+- the pattern gets repeated from step 1 (the button itself has a line traveling from one button to the other) to step 6
+(1), (1, 2), (1, 2, 3), and etc.
+- if wrong button is pressed, it resets entirely (like that one memory thing in among us)
+- a star shape glowing outline forms (6 of them and theyre on all 6 walls)
+
+- at the end of the level, the outline of the star shape forms, solidifies, and then it zooms in so that it's kind of like  a transition into the cutscene (slow zoom into really quick zoom, so it doesn't look like some 2000's ahh transition)
+
+level end:
+- same as levelstart1/2/3 but with the star transition at the beginning, fade to black, and then fade in to levelend1/2/3
+- fades to black at the end and cuts into main menu at the end like upperdut 

@@ -1,0 +1,208 @@
+[gd_scene load_steps=14 format=3 uid="uid://ceocrs3o7824m"]
+
+[ext_resource type="Script" uid="uid://vs1j50n7gerg" path="res://Scripts/main_menu.gd" id="1_ariec"]
+[ext_resource type="Texture2D" uid="uid://c5pb6uglu5fx6" path="res://Assets/MVP ASSETS/main menu.png" id="2_piq6v"]
+[ext_resource type="Texture2D" uid="uid://dr4rlmirka1qn" path="res://Assets/MVP ASSETS/main assets/cat_model.png" id="3_bqow3"]
+[ext_resource type="Texture2D" uid="uid://dctujtycv6jen" path="res://Assets/MVP ASSETS/intro1.png" id="3_jbrcx"]
+[ext_resource type="Texture2D" uid="uid://ccq80i60rygee" path="res://Assets/MVP ASSETS/intro2.png" id="4_bqow3"]
+
+[sub_resource type="Animation" id="Animation_eubhw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackFade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Intro1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Intro2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5po2b"]
+resource_name = "BlackFade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackFade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jbrcx"]
+resource_name = "Intro1_FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Intro1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bqow3"]
+resource_name = "Intro1_FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Intro1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fujrp"]
+resource_name = "Intro2_FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Intro2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_blqsg"]
+resource_name = "Intro2_FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Intro2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vkfg8"]
+resource_name = "BlackFade_FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackFade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fujrp"]
+_data = {
+&"BlackFade_FadeIn": SubResource("Animation_vkfg8"),
+&"BlackFade_FadeOut": SubResource("Animation_5po2b"),
+&"Intro1_FadeIn": SubResource("Animation_jbrcx"),
+&"Intro1_FadeOut": SubResource("Animation_bqow3"),
+&"Intro2_FadeIn": SubResource("Animation_fujrp"),
+&"Intro2_FadeOut": SubResource("Animation_blqsg"),
+&"RESET": SubResource("Animation_eubhw")
+}
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_ariec")
+
+[node name="MenuBackground" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_piq6v")
+expand_mode = 1
+
+[node name="IntroSequence" type="Node2D" parent="."]
+
+[node name="BlackFade" type="ColorRect" parent="IntroSequence"]
+offset_right = 1148.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CatModel" type="Sprite2D" parent="IntroSequence/BlackFade"]
+position = Vector2(555, 304)
+scale = Vector2(3.3113208, 3.3113208)
+texture = ExtResource("3_bqow3")
+
+[node name="Intro1" type="TextureRect" parent="IntroSequence"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("3_jbrcx")
+
+[node name="Intro2" type="TextureRect" parent="IntroSequence"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("4_bqow3")
+
+[node name="IntroAnim" type="AnimationPlayer" parent="IntroSequence"]
+libraries = {
+&"": SubResource("AnimationLibrary_fujrp")
+}
+autoplay = "BlackFade_FadeOut"
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 447.0
+offset_top = 379.0
+offset_right = 709.0
+offset_bottom = 464.0
+
+[node name="QuitButton" type="TextureButton" parent="."]
+offset_left = 476.0
+offset_top = 497.0
+offset_right = 673.0
+offset_bottom = 554.0
+
+[connection signal="animation_finished" from="IntroSequence/IntroAnim" to="." method="_on_intro_anim_animation_finished"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c50u1goalrfh"]
+
+[ext_resource type="Texture2D" uid="uid://dr4rlmirka1qn" path="res://Assets/MVP ASSETS/main assets/cat_model.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://t4go7rv07aqy" path="res://player_movement.gd" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+
+[node name="Player" type="Sprite2D"]
+texture = ExtResource("1_4flbx")
+
+[node name="MovementBody" type="CharacterBody2D" parent="."]
+script = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovementBody"]
+shape = SubResource("RectangleShape2D_onrkg")
